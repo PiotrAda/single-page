@@ -39,8 +39,30 @@ function timeoutText(i, x, y) {
               $(this).animate({'opacity':'1'},1000);
 
           }
-
       });
-
   });
+
+  function parallaxFunction(){
+    var parallax = $(".effect2");
+    window.onscroll = function(){
+      [].slice.call(parallax).forEach(function(el){
+        var windowYOffset = window.pageYOffset;
+        var defaultOffset = $(el).offset().top
+        var backgroundPosition = "50% " + ((windowYOffset-defaultOffset+500)*0.2) + "%";
+        el.style.backgroundPosition = backgroundPosition;
+      });
+    };
+
+  };
+
+  parallaxFunction();
+
+});
+
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
 });
