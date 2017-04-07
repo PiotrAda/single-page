@@ -26,22 +26,18 @@ function timeoutText(i, x, y) {
 
   /* Every time the window is scrolled ... */
   $(window).scroll( function(){
-
-      /* Check the location of each desired element */
-      $('.hidden').each( function(i){
-
-          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-          var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-          /* If the object is completely visible in the window, fade it in */
-          if( bottom_of_window > bottom_of_object ){
-
-              $(this).animate({'opacity':'1'},1000);
-
-          }
-      });
+    /* Check the location of each desired element */
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+    $('.hidden').each( function(i){
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      /* If the object is completely visible in the window, fade it in */
+      if( bottom_of_window > bottom_of_object ){
+        $(this).animate({'opacity':'1'},1000);
+      }
+    });
   });
 
+  // parallax;
   function parallaxFunction(){
     var parallax = $(".effect2");
     window.onscroll = function(){
@@ -52,17 +48,27 @@ function timeoutText(i, x, y) {
         el.style.backgroundPosition = backgroundPosition;
       });
     };
-
   };
-
   parallaxFunction();
-
 });
 
+// smooth scrolling;
 $(document).on('click', 'a', function(event){
     event.preventDefault();
-
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
 });
+
+// display popup on hover;
+$('.popup').hover(
+  function() {
+    $(this).parent().find('.desc').finish();
+    $(this).parent().find('.desc').slideDown(150);
+    $(this).addClass('scale');
+  },
+  function() {
+    $(this).parent().find('.desc').finish();
+    $(this).parent().find('.desc').slideUp(150);
+    $(this).removeClass('scale');
+  });

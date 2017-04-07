@@ -80,9 +80,9 @@ body {
   .skew .default-skew {
     box-sizing: content-box;
     width: 50%;
-    height: 50px;
+    height: 60px;
     position: absolute;
-    top: -25px; }
+    top: -30px; }
   .skew .left-skew-down {
     left: 0;
     transform: skewY(3deg);
@@ -150,24 +150,47 @@ body {
 
 /* Slide 3 */
 .slide3 {
-  background: #FFF;
   position: relative;
   display: block;
   color: #333333;
   padding: 100px 0 200px 0;
   z-index: 1;
-  text-align: center; }
+  text-align: center;
+  background: #AFEEFF;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(0deg, #FFF, #ffffcc, #FFF);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(0deg, #FFF, #ffffcc, #FFF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .slide3 .content {
+    position: relative; }
+    .slide3 .content .desccontainer {
+      display: inline-block;
+      position: relative;
+      height: 100%; }
+      .slide3 .content .desccontainer .desc {
+        font-family: "Oswald";
+        font-size: 20px;
+        font-weight: 900;
+        width: 120px;
+        height: 40px;
+        position: absolute;
+        display: none;
+        background: #ffedcc;
+        border: 3px solid #ffb732;
+        border-radius: 5px;
+        z-index: 2; }
   .slide3 h2 {
     text-align: center;
     font-family: "Oswald";
     font-size: 40px;
     margin: 0 0 30px 0;
-    padding: 20px 0; }
-  .slide3 img {
+    padding: 40px 0 20px 0; }
+  .slide3 .logo {
     width: 100px;
     height: 100px;
     margin: 0 10px;
-    display: inline-block; }
+    transition: all 0.3s; }
 
 /* Slide 5 */
 .slide4 {
@@ -176,5 +199,10 @@ body {
   height: 400px;
   margin: 0 auto;
   padding: 250px 0; }
+
+.scale {
+  transform: scale(1.1);
+  background-image: url("../img/brackets.png");
+  background-size: cover; }
 
 /*# sourceMappingURL=styl.css.map */
