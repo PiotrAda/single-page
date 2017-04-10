@@ -54,13 +54,27 @@ function timeoutText(i, x, y) {
 
 // smooth scrolling;
 $(document).on('click', 'a', function(event){
+  if(this.getAttribute("href").charAt(0) === "#") {
     event.preventDefault();
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
+  }
 });
 
-// display popup on hover;
+var menuButtons = $('.menubuttons');
+
+$(document).on('click', '.menubuttons', function(event){
+  for (i = 0 ; i < menuButtons.length ; i++){
+    $(menuButtons[i]).removeClass('active');
+  }
+  $(this).addClass('active');
+});
+
+// active button - menu;
+
+
+// display popup on hover - skills;
 $('.popup').hover(
   function() {
     $(this).parent().find('.desc').finish();
@@ -72,3 +86,14 @@ $('.popup').hover(
     $(this).parent().find('.desc').slideUp(150);
     $(this).removeClass('scale');
   });
+
+  // display popup on hover - projects;
+  $('.project').hover(
+    function() {
+      $(this).parent().find('.project-description').finish();
+      $(this).parent().find('.project-description').slideDown(150);
+    },
+    function() {
+      $(this).parent().find('.project-description').finish();
+      $(this).parent().find('.project-description').slideUp(150);
+    });
