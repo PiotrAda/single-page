@@ -10,6 +10,66 @@ body {
   min-height: 100%;
 }
 
+#loading-screen{
+  background-color: black;
+  position: fixed;
+  height: 20vh;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  text-align: center;
+  img{
+    margin-top: 40vh;
+  }
+}
+
+#intro{
+  .bar{
+    background-color: black;
+    position: fixed;
+    height: 20vh;
+    width: 100%;
+    z-index: 9;
+  }
+  .bar0{
+    top: 95vh;
+    transform: skewy(2deg);
+  }
+  .bar1{
+    top: 85vh;
+    transform: skewY(-2deg);
+  }
+  .bar2{
+    top: 70vh;
+    transform: skewY(-2deg);
+  }
+  .bar3{
+    top: 60vh;
+    transform: skewy(2deg);
+  }
+  .bar4{
+    top: 45vh;
+    transform: skewy(2deg);
+  }
+  .bar5{
+    top: 35vh;
+    transform: skewy(-2deg);
+  }
+  .bar6{
+    top: 20vh;
+    transform: skewy(-2deg);
+  }
+  .bar7{
+    top: 10vh;
+    transform: skewy(2deg);
+  }
+  .bar8{
+    top: -5vh;
+    transform: skewy(2deg);
+  }
+}
+
 .content {
   margin: 0 auto;
   max-width: 1080px;
@@ -22,8 +82,8 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   background: -webkit-linear-gradient(9deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(9deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 120px;
-  top: -30px;
+  height: 150px;
+  top: -80px;
   position: fixed;
   z-index: 5;
   transform: skewY(2deg);
@@ -32,11 +92,11 @@ body {
   }
   .content{
     transform: skewY(-2deg);
-    margin-top: 40px;
+    margin-top: 70px;
     max-width: 1960px;
     #nav {
       float: right;
-      margin: 20px 100px 0 0;
+      margin: 30px 50px 0 0;
       ul{
         list-style: none;
         display: block;
@@ -214,6 +274,36 @@ body {
     height: 100px;
     margin: 0 10px;
     transition: all 0.3s;
+  }
+  #skill-bar{
+    position: relative;
+    width: 60%;
+    height: 40px;
+    background: #FFF;
+    margin: 20px auto 0 auto;
+    border: 3px solid #ffb732;
+    border-radius: 5px;
+    #skill-fill{
+      border-radius: 5px;
+      height: 100%;
+      width: 30%;
+      background: orange; /* fallback for old browsers */
+      background: -webkit-linear-gradient(90deg, red, orange, red); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(90deg, red, orange, red); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      z-index: 1;
+      margin: 0 auto;
+      #count{
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        left: 0;
+        margin: 0;
+        font-family: "Oswald";
+        font-size: 23px;
+      }
+    }
   }
 }
 

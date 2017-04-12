@@ -4,8 +4,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="css/styl.css" type="text/css" />
-	<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -14,6 +12,8 @@
 </head>
 
 <body>
+
+	<div id="loading-screen"><img src="img/gears.svg" /></div>
 
   <header id="header">
     <div class="content">
@@ -28,6 +28,18 @@
       </nav>
     </div>
   </header>
+
+	<div id=intro>
+		<div class="bar bar0"></div>
+		<div class="bar bar1"></div>
+		<div class="bar bar2"></div>
+		<div class="bar bar3"></div>
+		<div class="bar bar4"></div>
+		<div class="bar bar5"></div>
+		<div class="bar bar6"></div>
+		<div class="bar bar7"></div>
+		<div class="bar bar8"></div>
+	</div>
 
   <div id="start" class="slide1">
     <div class="content">
@@ -70,20 +82,16 @@
     <div class="content">
 			<h2 class="hidden">My skillset:</h2>
 			<div id="skills">
-				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-html5.png"/><div class="desc">HTML5</div></div>
-				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-css3.png"/><div class="desc">CSS3</div></div>
-				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-javascript.png"/><div class="desc">javascript</div></div>
-				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-jquery.png"/><div class="desc">jQuery</div></div>
-				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-sass.png"/><div class="desc">SASS</div></div>
+				<div class="desccontainer"><img class="logo hidden popup" value="80" src="img/logo-html5.png"/><div class="desc">HTML5</div></div>
+				<div class="desccontainer"><img class="logo hidden popup" value="70" src="img/logo-css3.png"/><div class="desc">CSS3</div></div>
+				<div class="desccontainer"><img class="logo hidden popup" value="60" src="img/logo-javascript.png"/><div class="desc">javascript</div></div>
+				<div class="desccontainer"><img class="logo hidden popup" value="50" src="img/logo-jquery.png"/><div class="desc">jQuery</div></div>
+				<div class="desccontainer"><img class="logo hidden popup" value="50" src="img/logo-sass.png"/><div class="desc">SASS</div></div>
+				<div class="desccontainer"><img class="logo hidden popup" value="60" src="img/logo-atom.png"/><div class="desc">Atom</div></div>
+				<div class="desccontainer"><img class="logo hidden popup" value="80" src="img/logo-notepad++.png"/><div class="desc">notepad++</div></div>
+				<div class="desccontainer"><img class="logo hidden popup" value="80" src="img/logo-koala.png"/><div class="desc">Koala</div></div>
 			</div>
-			<div class="hidden line"></div>
-			<h2 class="hidden">The tools I use are:</h2>
-			<div id="tools">
-				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-atom.png"/><div class="desc">Atom</div></div>
-				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-notepad++.png"/><div class="desc">notepad++</div></div>
-				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-koala.png"/><div class="desc">Koala</div></div>
-			</div>
-			<div class="hidden line"></div>
+			<div class="hidden" id="skill-bar"><div id="skill-fill"><p id="count">Hover skills</p></div></div>
 			<h2 class="hidden">I am willing to learn:</h2>
 			<div id="aims">
 				<div class="desccontainer"><img class="logo hidden popup" src="img/logo-angular.png"/><div class="desc">Angualar</div></div>
@@ -242,9 +250,13 @@
 
 	<div class="end"></div>
 
-</body>
+	<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/hover.js"></script>
+	<script type="text/javascript" src="js/load.js"></script>
+	<script type="text/javascript" src="js/submit.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 
-<script type="text/javascript" src="js/submit.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+</body>
 
 </html>

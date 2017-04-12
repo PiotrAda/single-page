@@ -3,27 +3,6 @@ $(document).ready(function() {
   // Scrolls page to top on document refresh;
   $(this).scrollTop(0);
 
-  // Greeting text on 1'st site;
-  var containerText = $('.containerText');
-  var finalText = ["Hi, Im Piotr Adamus,", "welcome to my website."];
-  var currentText = ['',''];
-
-function resolve(x, y) {
-  for (i = 0 ; i < finalText[x].length; i++){
-    timeoutText(i, x, y);
-  }
-}
-
-function timeoutText(i, x, y) {
-  setTimeout(function(){
-    $(containerText[x]).text(currentText[x] + finalText[x].charAt(i));
-    currentText[x] = $(containerText[x]).text();
-  }, 80*i+80*y);
-};
-
-  resolve(0, 0);
-  resolve(1, finalText[0].length);
-
   /* Every time the window is scrolled ... */
   $(window).scroll( function(){
     /* Check the location of each desired element */
@@ -70,30 +49,3 @@ $(document).on('click', '.menubuttons', function(event){
   }
   $(this).addClass('active');
 });
-
-// active button - menu;
-
-
-// display popup on hover - skills;
-$('.popup').hover(
-  function() {
-    $(this).parent().find('.desc').finish();
-    $(this).parent().find('.desc').slideDown(150);
-    $(this).addClass('scale');
-  },
-  function() {
-    $(this).parent().find('.desc').finish();
-    $(this).parent().find('.desc').slideUp(150);
-    $(this).removeClass('scale');
-  });
-
-  // display popup on hover - projects;
-  $('.project').hover(
-    function() {
-      $(this).parent().find('.project-description').finish();
-      $(this).parent().find('.project-description').slideDown(150);
-    },
-    function() {
-      $(this).parent().find('.project-description').finish();
-      $(this).parent().find('.project-description').slideUp(150);
-    });
