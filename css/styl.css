@@ -167,6 +167,7 @@ body {
   background: url("../img/slide1.jpg") 50% 0 no-repeat fixed;
   color: #fff;
   height: 1000px;
+  min-height: 100vh;
   margin: 0;
   padding: 200px 0 0 0;
   background-size: cover;
@@ -184,7 +185,8 @@ body {
     margin: 5px 0;
     padding: 0;
     z-index: 1;
-    position: relative; }
+    position: relative;
+    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey; }
 
 /* Slide 2 */
 .slide2 {
@@ -193,17 +195,21 @@ body {
   display: flex;
   color: #333333;
   height: 100%;
+  min-height: 100vh;
   padding: 100px 0;
   text-align: justify; }
   .slide2 h3, .slide2 p {
     font-family: "Oswald"; }
   .slide2 h3 {
     font-size: 40px;
-    padding: 60px 0 30px 0;
+    padding: 10px 0 30px 0;
     text-align: center; }
   .slide2 p {
     font-size: 30px;
     text-align: justify; }
+    .slide2 p a {
+      color: orange;
+      text-decoration: none; }
 
 /* Slide 3 */
 .slide3 {
@@ -212,6 +218,7 @@ body {
   color: #333333;
   padding: 50px 0 200px 0;
   z-index: 1;
+  min-height: 100vh;
   text-align: center; }
   .slide3 .content {
     position: relative; }
@@ -247,13 +254,13 @@ body {
     width: 60%;
     height: 40px;
     background: #FFF;
-    margin: 20px auto 0 auto;
+    margin: 60px auto 0 auto;
     border: 3px solid #ffb732;
     border-radius: 5px; }
     .slide3 #skill-bar #skill-fill {
       border-radius: 5px;
       height: 100%;
-      width: 30%;
+      width: 40%;
       background: orange;
       /* fallback for old browsers */
       background: -webkit-linear-gradient(90deg, red, orange, red);
@@ -281,8 +288,9 @@ body {
 /* Slide 4 */
 .slide4 {
   display: flex;
+  min-height: 100vh;
   background-color: #FFF;
-  padding: 100px 0 50px 0; }
+  padding: 100px 0 150px 0; }
   .slide4 .projectcontainer {
     position: relative;
     display: block;
@@ -328,13 +336,24 @@ body {
   /* fallback for old browsers */
   color: #333333;
   height: 100%;
+  min-height: 100vh;
   padding: 50px 0 100px 0;
   text-align: justify; }
+  .slide5 .reference {
+    text-align: center;
+    width: 100%;
+    height: 100%; }
+    .slide5 .reference .logo {
+      display: inline-block;
+      margin: 0 10px;
+      width: 100px;
+      height: 100px; }
   .slide5 #form-messages, .slide5 .field {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    text-align: center; }
   .slide5 label {
     display: block;
     font-size: 1.2em;

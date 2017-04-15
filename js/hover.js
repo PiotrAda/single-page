@@ -30,7 +30,7 @@ $('#skill-fill').prop('Counter', 0);
       $('#skill-fill').animate({width: '30%'}, 500);
       $('#count').stop();
       $('#count').fadeOut( 300, function(){
-        $('#count').text('Hover skills').fadeIn(300)
+        $('#count').text('Hover skills & tools').fadeIn(300)
       });
     }
   );
