@@ -16,19 +16,29 @@ $(document).ready(function() {
     });
   });
 
+  testExp = new RegExp('Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile' , 'i');
+
   // parallax;
   function parallaxFunction(){
-    var parallax = $(".effect2");
-    window.onscroll = function(){
-      [].slice.call(parallax).forEach(function(el){
-        var windowYOffset = window.pageYOffset;
-        var defaultOffset = $(el).offset().top
-        var backgroundPosition = "50% " + ((windowYOffset-defaultOffset+500)*0.2) + "%";
-        el.style.backgroundPosition = backgroundPosition;
-      });
-    };
+    if (testExp.test(navigator.userAgent)){
+      console.log('do nothing');
+    }
+    else {
+      var parallax = $(".skew-image");
+      window.onscroll = function(){
+        [].slice.call(parallax).forEach(function(el){
+          console.log('working');
+          var windowYOffset = window.pageYOffset;
+          var defaultOffset = $(el).offset().top
+          var backgroundPosition = "50% " + ((windowYOffset-defaultOffset+500)*0.2) + "%";
+          el.style.backgroundPosition = backgroundPosition;
+        });
+      };
+    }
   };
+
   parallaxFunction();
+
 });
 
 // smooth scrolling;

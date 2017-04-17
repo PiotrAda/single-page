@@ -21,6 +21,9 @@ body {
   text-align: center;
   img{
     margin-top: 40vh;
+    @media (max-width: 667px) {
+      margin-top: 30vh;
+    }
   }
 }
 
@@ -71,6 +74,7 @@ body {
 }
 
 .content {
+  position: relative;
   margin: 0 auto;
   max-width: 1080px;
 }
@@ -176,20 +180,66 @@ body {
   }
 }
 
+.skew-background-one{
+  background:url('../img/skew1.jpg') 50% 0 no-repeat fixed;
+}
+
+.skew-background-two{
+  background:url('../img/skew2.jpg') 50% 0 no-repeat fixed;
+}
+
+.skew-background-three{
+  background:url('../img/skew3.jpg') 50% 0 no-repeat fixed;
+}
+
 .skew-image{
-  background:url('../img/skew.jpg') 50% 0 no-repeat fixed;
+  background-size: cover;
   color: #fff;
   height: 300px;
   margin: 0;
-  padding: 0 0 0 0;
-  background-size: cover;
+  padding: 0;
+  @media (max-width: 667px) {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+
+// bottom-button;
+
+.button-container{
+  width: 100%;
+  height: 50px;
+  margin: 30px auto;
+  clear: both;
+  position: absolute;
+  left: 0;
+  bottom: 75px;
+  .bottom-button{
+    background-color: rgb(255,192,76);
+    background-color: rgba(255,192,76,0.8);
+    border-radius: 5px;
+    width: 100px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    a{
+      display: inline-block;
+      width: 100%;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      font-size: 55px;
+      text-decoration: none;
+    }
+  }
 }
 
 /* Slide 1 */
 .slide1{
+  position: relative;
   background:url('../img/slide1.jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  height: 1000px;
   min-height: 100vh;
   margin: 0;
   padding: 200px 0 0 0;
@@ -199,6 +249,7 @@ body {
   background-size: cover;
   @media (max-width: 667px) {
     background-attachment: scroll;
+    padding-top: 30px;
   }
   h1 {
     font-family: "Oswald";
@@ -210,17 +261,21 @@ body {
     z-index: 1;
     position: relative;
     text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+    @media (max-width: 667px) {
+        font-size: 40px;
+    }
   }
 }
 
 /* Slide 2 */
 .slide2{
+  position: relative;
   background: #FFF; /* fallback for old browsers */
   display: flex;
   color: #333333;
   height: 100%;
   min-height: 100vh;
-  padding: 100px 0;
+  padding: 50px 0 200px 0;
   text-align: justify;
   h3, p {
     font-family: "Oswald";
@@ -229,10 +284,18 @@ body {
     font-size: 40px;
     padding: 10px 0 30px 0;
     text-align: center;
+    @media (max-width: 667px) {
+        font-size: 25px;
+    }
   }
   p {
     font-size: 30px;
     text-align: justify;
+    @media (max-width: 667px) {
+        font-size: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
     a{
       color: orange;
       text-decoration: none;
@@ -247,6 +310,7 @@ body {
   color: #333333;
   padding: 50px 0 200px 0;
   z-index: 1;
+  height: 100%;
   min-height: 100vh;
   text-align:center;
   .content {
@@ -276,12 +340,19 @@ body {
     font-size: 40px;
     margin: 0 0 30px 0;
     padding: 40px 0 0 0;
+    @media (max-width: 667px) {
+      font-size: 35px;
+    }
   }
   .logo {
     width: 100px;
     height: 100px;
     margin: 0 10px;
     transition: all 0.3s;
+    @media (max-width: 667px) {
+      width: 80px;
+      height: 80px;
+    }
   }
   #skill-bar{
     position: relative;
@@ -291,6 +362,9 @@ body {
     margin: 60px auto 0 auto;
     border: 3px solid #ffb732;
     border-radius: 5px;
+    @media (max-width: 667px) {
+      width: 90%;
+    }
     #skill-fill{
       border-radius: 5px;
       height: 100%;
@@ -324,10 +398,20 @@ body {
 
 /* Slide 4 */
 .slide4 {
+  position: relative;
   display: flex;
   min-height: 100vh;
   background-color: #FFF;
-  padding: 100px 0 150px 0;
+  padding: 100px 0 200px 0;
+  @media (max-width: 667px) {
+    padding-top: 50px;
+    .button-container{
+      bottom: 50px;
+    }
+    .line{
+      margin: 50px 0;
+    }
+  }
   .projectcontainer {
     position: relative;
     display: block;
@@ -343,6 +427,9 @@ body {
       width: 90%;
       margin: 0 auto;
       display: block;
+      @media (max-width: 667px) {
+        width: 80%;
+      }
     }
     .project-description {
       display: none;
@@ -363,17 +450,24 @@ body {
     font-family: "Oswald";
     font-size: 40px;
     padding: 0 0 10px 0;
+    @media (max-width: 667px) {
+      font-size: 35px;
+    }
   }
   p {
     font-family: "Oswald";
     font-size: 27px;
     text-align: center;
     margin: 0 auto;
+    @media (max-width: 667px) {
+      font-size: 25px;
+    }
   }
 }
 
 /* Slide 5 */
 .slide5{
+  position: relative;
   background: #FFF; /* fallback for old browsers */
   color: #333333;
   height: 100%;
