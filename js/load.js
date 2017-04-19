@@ -21,7 +21,7 @@ var intro = function(){
 var typeText = function(){
 
   var containerText = $('.containerText');
-  var finalText = ["Hi, Im Piotr Adamus,", "welcome to my website."];
+  var finalText = ["Hi, I'm Piotr Adamus,", "welcome to my website."];
   var currentText = ['',''];
 
   function resolve(x, y) {

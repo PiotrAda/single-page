@@ -180,7 +180,6 @@ body {
 
 .button-container {
   width: 100%;
-  height: 50px;
   margin: 30px auto;
   clear: both;
   position: absolute;
@@ -191,7 +190,6 @@ body {
     background-color: rgba(255, 192, 76, 0.8);
     border-radius: 5px;
     width: 100px;
-    height: 60px;
     display: block;
     margin: 0 auto; }
     .button-container .bottom-button a {
@@ -200,8 +198,8 @@ body {
       color: white;
       text-align: center;
       margin: 0;
-      padding: 0;
-      font-size: 55px;
+      padding: 5px;
+      font-size: 50px;
       text-decoration: none; }
 
 /* Slide 1 */
@@ -302,7 +300,9 @@ body {
     padding: 40px 0 0 0; }
     @media (max-width: 667px) {
       .slide3 h2 {
-        font-size: 35px; } }
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 15px; } }
   .slide3 .logo {
     width: 100px;
     height: 100px;
@@ -335,6 +335,9 @@ body {
       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       z-index: 1;
       margin: 0 auto; }
+      @media (max-width: 667px) {
+        .slide3 #skill-bar #skill-fill {
+          width: 70%; } }
       .slide3 #skill-bar #skill-fill #count {
         display: inline-block;
         position: absolute;
@@ -364,7 +367,7 @@ body {
       .slide4 .button-container {
         bottom: 50px; }
       .slide4 .line {
-        margin: 50px 0; } }
+        margin: 50px auto; } }
   .slide4 .projectcontainer {
     position: relative;
     display: block;
@@ -394,7 +397,7 @@ body {
       z-index: 1000;
       color: #FFF;
       font-family: 'Wellfleet';
-      font-size: 1.2em;
+      font-size: 1em;
       padding: 10px 10px; }
   .slide4 h2 {
     text-align: center;
@@ -403,7 +406,9 @@ body {
     padding: 0 0 10px 0; }
     @media (max-width: 667px) {
       .slide4 h2 {
-        font-size: 35px; } }
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 15px; } }
   .slide4 p {
     font-family: "Oswald";
     font-size: 27px;
@@ -411,7 +416,9 @@ body {
     margin: 0 auto; }
     @media (max-width: 667px) {
       .slide4 p {
-        font-size: 25px; } }
+        font-size: 25px;
+        margin-left: 15px;
+        margin-right: 15px; } }
 
 /* Slide 5 */
 .slide5 {
@@ -450,6 +457,9 @@ body {
     font-size: 1.2em;
     border-radius: 3px;
     border: 1px solid #D9D9D9; }
+    @media (max-width: 667px) {
+      .slide5 input {
+        width: 90%; } }
   .slide5 textarea {
     width: 100%;
     height: 200px;
@@ -457,6 +467,9 @@ body {
     font-size: 1.2em;
     border-radius: 3px;
     border: 1px solid #D9D9D9; }
+    @media (max-width: 667px) {
+      .slide5 textarea {
+        width: 90%; } }
   .slide5 button {
     display: inline-block;
     border-radius: 3px;
@@ -471,28 +484,47 @@ body {
     font-weight: bold;
     width: 100%;
     text-align: center; }
+    @media (max-width: 667px) {
+      .slide5 button {
+        width: 90%; } }
   .slide5 h2 {
     text-align: center;
     font-family: "Oswald";
-    font-size: 40px;
-    padding: 0 0 30px 0; }
+    font-size: 40px; }
+    @media (max-width: 667px) {
+      .slide5 h2 {
+        font-size: 30px;
+        margin-left: 15px;
+        margin-right: 15px; } }
   .slide5 h3 {
     text-align: center;
     font-family: "Oswald";
     font-size: 30px;
     padding: 0 0 30px 0; }
+    @media (max-width: 667px) {
+      .slide5 h3 {
+        font-size: 25px;
+        margin-left: 15px;
+        margin-right: 15px; } }
   .slide5 table, .slide5 p {
     font-family: "Oswald";
     font-size: 27px;
     text-align: center;
     margin: 0 auto;
     padding: 20px 0; }
+    @media (max-width: 667px) {
+      .slide5 table, .slide5 p {
+        font-size: 25px; } }
     .slide5 table th, .slide5 p th {
       padding-right: 20px;
       text-align: right; }
     .slide5 table a, .slide5 p a {
       text-decoration: none;
       color: #005aff; }
+    @media (max-width: 667px) {
+      .slide5 table p, .slide5 p p {
+        margin-left: 15px;
+        margin-right: 15px; } }
   .slide5 .contact-data {
     padding: 5px 0; }
 
