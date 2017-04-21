@@ -114,9 +114,9 @@ body {
         a {
           color: #fff;
           opacity:0.6;
-          font-size: 20px;
+          font-size: 22px;
           text-decoration: none;
-          font-family: 'Wellfleet';
+          font-family: 'Alegreya';
         }
         a.active {
           color: #fff;
@@ -238,7 +238,7 @@ body {
   position: relative;
   background:url('../img/slide1.jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  min-height: 100vh;
+  min-height: 110vh;
   margin: 0;
   padding: 200px 0 0 0;
   background-size: cover;
@@ -306,7 +306,7 @@ body {
   position: relative;
   display: block;
   color: #333333;
-  padding: 50px 0 200px 0;
+  padding: 20px 0 220px 0;
   z-index: 1;
   height: 100%;
   min-height: 100vh;
@@ -425,10 +425,15 @@ body {
     @media (max-width: 667px) {
       width: 100%;
     }
+    @media (min-width: 667px) and (max-width: 960px) {
+      width: 50%;
+    }
     .projectimg {
       height: 90%;
       width: 90%;
       margin: 0 auto;
+      border: 3px solid rgba(25,140,255,0.8);
+      border-radius: 5px;
       display: block;
       @media (max-width: 667px) {
         width: 80%;
@@ -437,7 +442,8 @@ body {
     .project-description {
       display: none;
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(25,140,255, 0.8);
+      border-radius: 5px;
       width: 90%;
       bottom: 10%;
       left: 5%;
@@ -463,6 +469,7 @@ body {
     font-family: "Oswald";
     font-size: 27px;
     text-align: center;
+    padding-bottom: 50px;
     margin: 0 auto;
     @media (max-width: 667px) {
       font-size: 25px;
